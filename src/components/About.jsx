@@ -52,7 +52,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="relative py-20 bg-transparent">
+    <section id="about" className="relative py-12 bg-transparent">
       {/* Background radial spotlight */}
       <div className="absolute top-[20%] right-[-10%] spotlight bg-purple-900/5 w-[400px] h-[400px]"></div>
 

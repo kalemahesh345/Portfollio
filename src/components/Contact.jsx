@@ -58,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 bg-transparent">
+    <section id="contact" className="relative py-12 bg-transparent">
       {/* Background radial spotlight */}
       <div className="absolute bottom-[10%] left-[-10%] spotlight bg-purple-900/5 w-[500px] h-[500px]"></div>
 

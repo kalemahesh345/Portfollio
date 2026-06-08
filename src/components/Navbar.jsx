@@ -5,12 +5,14 @@ import { FiMenu, FiX, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Services', href: '#services' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
   { name: 'Contact', href: '#contact' },
 ];
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

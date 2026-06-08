@@ -88,7 +88,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="relative py-20 bg-transparent">
+    <section id="skills" className="relative py-12 bg-transparent">
       {/* Glow spotlight */}
       <div className="absolute top-[30%] left-[-10%] spotlight bg-cyan-900/5 w-[500px] h-[500px]"></div>
 

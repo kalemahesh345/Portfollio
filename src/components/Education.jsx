@@ -22,7 +22,7 @@ const educationData = [
   },
   {
     category: 'Training Program',
-    title: 'Full Stack MERN Stack Bootcamp',
+    title: 'Full Stack MERN Stack',
     institution: 'DreamsGuider.com',
     duration: '6 Months (2025)',
     score: 'Completed with A+ Grade',
@@ -38,8 +38,8 @@ const educationData = [
   {
     category: 'Certifications',
     title: 'Professional Certifications',
-    institution: 'Self-Paced Learning Platforms',
-    duration: '2024 - 2025',
+    institution: 'Dreams Guider.com',
+    duration: '2025-2026',
     score: 'Verified Badges',
     details: [
       'Full Stack Web Development - Gained hands-on experience in React.js, Node.js, Express.js, MongoDB, MySQL, REST APIs, authentication, and modern web application architecture.',
@@ -77,7 +77,7 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="relative py-20 bg-transparent">
+    <section id="education" className="relative py-12 bg-transparent">
       {/* Background glow spotlight */}
       <div className="absolute top-[30%] right-[-10%] spotlight bg-cyan-900/5 w-[500px] h-[500px]"></div>
 

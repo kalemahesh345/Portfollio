@@ -84,7 +84,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-20 bg-transparent">
+    <section id="projects" className="relative py-12 bg-transparent">
       {/* Background radial spotlight */}
       <div className="absolute top-[40%] right-[-10%] spotlight bg-purple-900/5 w-[500px] h-[500px]"></div>
 
