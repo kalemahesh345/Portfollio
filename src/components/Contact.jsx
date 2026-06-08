@@ -36,25 +36,47 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
 
-    // Simulate API request delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowToast(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/kalemahesh082003@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
       });
-      // Auto-hide toast
-      setTimeout(() => setShowToast(false), 4000);
-    }, 1500);
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === "true" || data.success)) {
+        setShowToast(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        // Auto-hide toast
+        setTimeout(() => setShowToast(false), 4000);
+      } else {
+        alert(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      alert("Unable to send message. Please check your internet connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -157,7 +179,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="[Name]"
+                      placeholder="e.g. John Doe"
                       className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.name ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300`}
                     />
                     {errors.name && (
@@ -178,7 +200,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="[EMAIL_ADDRESS]"
+                      placeholder="e.g. john@example.com"
                       className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.email ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300`}
                     />
                     {errors.email && (
@@ -200,7 +222,7 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="[Subject]"
+                    placeholder="e.g. Project Collaboration"
                     className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.subject ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300`}
                   />
                   {errors.subject && (
@@ -221,7 +243,7 @@ export default function Contact() {
                     rows="5"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="[Message]"
+                    placeholder="Type your message here..."
                     className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.message ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300 resize-none`}
                   />
                   {errors.message && (
