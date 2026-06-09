@@ -31,7 +31,7 @@ export default function Footer() {
           <FiChevronsUp className="w-5 h-5 group-hover:animate-bounce" />
         </button>
 
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 mb-8 mt-4 text-center md:text-left">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 mb-2 mt-2 text-center md:text-left">
           {/* Logo & short description */}
           <div>
             <h3 className="text-lg font-bold text-white tracking-wider mb-2">
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
           {/* Copyright notice */}
           <span className="text-[11px] text-slate-500">
-            &copy; {new Date().getFullYear()} Mahesh kale. All rights reserved. Crafted with React & Tailwind.
+            &copy; {new Date().getFullYear()} Mahesh kale. All rights reserved.
           </span>
 
           {/* Social connections */}

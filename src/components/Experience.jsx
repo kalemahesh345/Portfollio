@@ -54,7 +54,7 @@ export default function Experience() {
   return (
     <section id="experience" className="relative py-12 bg-transparent">
       {/* Background glow spotlight */}
-      <div className="absolute top-[25%] left-[-10%] spotlight bg-purple-900/5 w-[500px] h-[500px]"></div>
+      <div className="absolute top-[25%] left-[-10%] spotlight bg-primary-500/5 w-[500px] h-[500px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <SectionTitle

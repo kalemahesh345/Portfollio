@@ -44,7 +44,7 @@ export default function About() {
       desc: 'Master of Computer Science (Pursuing 2025-2027)'
     },
     {
-      icon: <FiActivity className="w-6 h-6 text-pink-400" />,
+      icon: <FiActivity className="w-6 h-6 text-primary-400" />,
       title: 'Focus Area',
       value: 'Full Stack Developer',
       desc: 'MERN stack development, relational databases and AI Workflow Automation'
@@ -54,7 +54,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-12 bg-transparent">
       {/* Background radial spotlight */}
-      <div className="absolute top-[20%] right-[-10%] spotlight bg-purple-900/5 w-[400px] h-[400px]"></div>
+      <div className="absolute top-[20%] right-[-10%] spotlight bg-primary-500/5 w-[400px] h-[400px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <SectionTitle
@@ -81,40 +81,34 @@ export default function About() {
 
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary-500"></span>
-                Career Objective
+                My Story & Focus
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
-                I am a passionate <strong className="text-primary-400">Full Stack Developer</strong> skilled in React.js, Node.js, AI Integration, and Automation. Dedicated to building scalable web applications, intelligent solutions, and seamless user experiences that solve real-world problems.
+              <p className="text-slate-300 leading-relaxed mb-4">
+                I am a Master of Computer Science (MCS) student based in Pune, dedicated to building responsive web applications and custom automation tools. My coding journey revolves around creating full-stack systems using the <strong className="text-primary-400">MERN stack</strong> and designing robust relational database systems.
               </p>
-
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="w-2.5 h-2.5 rounded-full bg-accent-500"></span>
-                My Passion
-              </h3>
               <p className="text-slate-300 leading-relaxed">
-                I am passionate about building scalable full-stack applications, integrating AI-powered solutions, and creating intelligent automation systems that solve real-world problems. Driven by curiosity and continuous learning, I enjoy transforming innovative ideas into impactful digital experiences through modern technologies.
-
+                Driven by curiosity, I enjoy finding creative solutions to manual work. I love integrating AI capabilities (like Gemini or OpenAI APIs) into web products and designing workflows in <strong className="text-accent-400">n8n</strong> to automate daily tasks. I'm always looking for opportunities to learn, write cleaner code, and collaborate on interesting projects.
               </p>
             </div>
 
             <div className="glass-card p-8 rounded-3xl border border-white/5 relative overflow-hidden">
               <h3 className="text-lg font-semibold text-white mb-3">Quick Facts</h3>
-              <ul className="grid grid-cols-2 gap-4 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  Name: Mahesh Kale
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-400">
+                <li className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+                  <span><strong>Name:</strong> Mahesh Kale</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  Age: 22 Years
+                <li className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+                  <span><strong>Age:</strong> 22 Years</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  Languages: English, Hindi, Marathi
+                <li className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+                  <span><strong>Languages:</strong> English, Hindi, Marathi</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  Hobby:Learning New Technologies, Exploring AI Tools and Automation,Building Personal Projects,Problem Solving.
+                <li className="flex items-start gap-2.5 sm:col-span-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+                  <span><strong>Hobbies:</strong> Learning new technologies, exploring AI automation, building side projects, problem solving</span>
                 </li>
               </ul>
             </div>

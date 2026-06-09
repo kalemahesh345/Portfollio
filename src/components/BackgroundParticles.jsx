@@ -2,149 +2,57 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 export default function BackgroundParticles() {
-  const canvasRef = useRef(null);
   const containerRef = useRef(null);
+  const glowRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const glow = glowRef.current;
+    if (!glow) return;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let animationFrameId;
-    let particles = [];
-    const mouse = { x: null, y: null, radius: 150 };
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isHovering = false;
 
     const handleMouseMove = (e) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!isHovering) {
+        isHovering = true;
+        gsap.to(glow, { opacity: 0.15, duration: 0.5 });
+      }
     };
 
     const handleMouseLeave = () => {
-      mouse.x = null;
-      mouse.y = null;
+      isHovering = false;
+      gsap.to(glow, { opacity: 0, duration: 0.8 });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mouseleave', handleMouseLeave);
 
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = Math.random() * 0.4 - 0.2;
-        this.speedY = Math.random() * 0.4 - 0.2;
-        this.color = Math.random() > 0.5 ? 'rgba(139, 92, 246, 0.35)' : 'rgba(6, 182, 212, 0.35)'; // Purple or Cyan
+    // Smooth lerp animation for the mouse spotlight
+    let animationId;
+    const updateGlow = () => {
+      // Lerp formula: current = current + (target - current) * ease
+      currentX += (mouseX - currentX) * 0.08;
+      currentY += (mouseY - currentY) * 0.08;
+
+      if (glow) {
+        glow.style.transform = `translate3d(${currentX - 250}px, ${currentY - 250}px, 0)`;
       }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        // Bounce on borders
-        if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
-        if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
-
-        // Interaction with mouse
-        if (mouse.x !== null && mouse.y !== null) {
-          const dx = mouse.x - this.x;
-          const dy = mouse.y - this.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < mouse.radius) {
-            const force = (mouse.radius - distance) / mouse.radius;
-            const directionX = dx / distance;
-            const directionY = dy / distance;
-            this.x -= directionX * force * 2;
-            this.y -= directionY * force * 2;
-          }
-        }
-      }
-
-      draw() {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    const init = () => {
-      particles = [];
-      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 15000);
-      for (let i = 0; i < Math.min(numberOfParticles, 120); i++) {
-        particles.push(new Particle());
-      }
+      animationId = requestAnimationFrame(updateGlow);
     };
+    updateGlow();
 
-    init();
-
-    const drawLines = () => {
-      for (let a = 0; a < particles.length; a++) {
-        for (let b = a + 1; b < particles.length; b++) {
-          const dx = particles[a].x - particles[b].x;
-          const dy = particles[a].y - particles[b].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {
-            const opacity = (100 - distance) / 100 * 0.15;
-            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            ctx.moveTo(particles[a].x, particles[a].y);
-            ctx.lineTo(particles[b].x, particles[b].y);
-            ctx.stroke();
-          }
-        }
-      }
-    };
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw grid overlay effect manually
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.005)';
-      ctx.lineWidth = 1;
-      const gridSize = 40;
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-      drawLines();
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    // GSAP floating animations for the background ambient blobs
+    // GSAP floating animations for the ambient blobs
     const blobs = containerRef.current.querySelectorAll('.bg-blob');
     blobs.forEach((blob) => {
       gsap.to(blob, {
-        x: 'random(-100, 100)',
-        y: 'random(-100, 100)',
-        duration: 'random(6, 12)',
+        x: 'random(-150, 150)',
+        y: 'random(-150, 150)',
+        duration: 'random(12, 24)',
         repeat: -1,
         yoyo: true,
         ease: 'sine.inOut',
@@ -152,27 +60,44 @@ export default function BackgroundParticles() {
     });
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseleave', handleMouseLeave);
-      cancelAnimationFrame(animationFrameId);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      cancelAnimationFrame(animationId);
     };
   }, []);
 
   return (
     <div ref={containerRef} className="fixed inset-0 w-full h-full -z-10 bg-[#030712] overflow-hidden pointer-events-none">
-      {/* Background Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none"></div>
+      {/* Background Grid Pattern Overlay with radial mask */}
+      <div 
+        className="absolute inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none"
+        style={{
+          maskImage: 'radial-gradient(circle at center, black 40%, transparent 90%)',
+          WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 90%)'
+        }}
+      ></div>
 
-      {/* Spotlights / Ambient neon glow circles */}
-      <div className="bg-blob spotlight bg-purple-900/10 top-[-10%] left-[-10%] w-[500px] h-[500px]"></div>
-      <div className="bg-blob spotlight bg-cyan-900/10 bottom-[-10%] right-[-10%] w-[500px] h-[500px]"></div>
-      <div className="bg-blob spotlight bg-indigo-900/10 top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]"></div>
+      {/* SVG Noise/Grain Overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+        }}
+      ></div>
 
-      {/* Interactive canvas particles */}
-      <canvas ref={canvasRef} className="absolute inset-0 block w-full h-full" />
+      {/* Ambient neon glow blobs */}
+      <div className="bg-blob absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-primary-500/10 blur-[130px] pointer-events-none"></div>
+      <div className="bg-blob absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-accent-500/10 blur-[130px] pointer-events-none"></div>
+      <div className="bg-blob absolute top-[30%] left-[20%] w-[500px] h-[500px] rounded-full bg-secondary-500/5 blur-[120px] pointer-events-none"></div>
 
-      {/* Extra soft dark overlay */}
+      {/* Interactive mouse follow glow spotlight */}
+      <div 
+        ref={glowRef} 
+        className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-primary-500/20 via-accent-500/20 to-secondary-500/10 blur-[100px] opacity-0 pointer-events-none mix-blend-screen"
+        style={{ willChange: 'transform' }}
+      ></div>
+
+      {/* Radial soft dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/30 to-[#030712] pointer-events-none"></div>
     </div>
   );

@@ -115,13 +115,13 @@ export default function Navbar() {
 
         {/* Social Icons (Desktop) */}
         <div className="hidden lg:flex items-center gap-4 text-slate-400">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors duration-300 text-lg">
+          <a href="https://github.com/kalemahesh345" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors duration-300 text-lg">
             <FiGithub />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-400 transition-colors duration-300 text-lg">
+          <a href="https://linkedin.com/in/mahesh-kale-450149336" target="_blank" rel="noopener noreferrer" className="hover:text-accent-400 transition-colors duration-300 text-lg">
             <FiLinkedin />
           </a>
-          <a href="mailto:mahesh@example.com" className="hover:text-secondary-400 transition-colors duration-300 text-lg">
+          <a href="mailto:kalemahesh082003@gmail.com" className="hover:text-secondary-400 transition-colors duration-300 text-lg">
             <FiMail />
           </a>
         </div>
@@ -169,13 +169,13 @@ export default function Navbar() {
             <div className="h-px bg-white/5 my-2"></div>
             
             <div className="flex justify-center gap-6 text-slate-400 text-xl py-2">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors duration-300">
+              <a href="https://github.com/kalemahesh345" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors duration-300">
                 <FiGithub />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-400 transition-colors duration-300">
+              <a href="https://linkedin.com/in/mahesh-kale-450149336" target="_blank" rel="noopener noreferrer" className="hover:text-accent-400 transition-colors duration-300">
                 <FiLinkedin />
               </a>
-              <a href="mailto:mahesh@example.com" className="hover:text-secondary-400 transition-colors duration-300">
+              <a href="mailto:kalemahesh082003@gmail.com" className="hover:text-secondary-400 transition-colors duration-300">
                 <FiMail />
               </a>
             </div>

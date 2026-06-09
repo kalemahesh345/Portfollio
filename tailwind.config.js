@@ -9,36 +9,36 @@ export default {
     extend: {
       colors: {
         darkBg: {
-          900: '#0F172A', // Deep slate blue
-          950: '#030712', // Near black
+          900: '#0E0E11', // Obsidian Charcoal
+          950: '#050507', // Deep Obsidian Black
         },
         primary: {
-          50: '#F5F3FF',
-          100: '#EDE9FE',
-          200: '#DDD6FE',
-          300: '#C4B5FD',
-          400: '#A78BFA',
-          500: '#8B5CF6', // Purple/Violet accent
-          600: '#7C3AED',
-          700: '#6D28D9',
+          50: '#FCF9F2',
+          100: '#FAF3E3',
+          200: '#F2E1C1',
+          300: '#E5C396',
+          400: '#D8A46B',
+          500: '#C58B49', // Gold accent
+          600: '#A67035',
+          700: '#865725',
         },
         secondary: {
-          50: '#ECFDF5',
-          100: '#D1FAE5',
-          200: '#A7F3D0',
-          300: '#6EE7B7',
-          400: '#34D399',
-          500: '#10B981', // Emerald green accent
-          600: '#059669',
+          50: '#FAF9F6',
+          100: '#F4F1EA',
+          200: '#E5E0D5',
+          300: '#D0C7B7',
+          400: '#B5A894',
+          500: '#988A75', // Stone/Sand accent
+          600: '#7E715D',
         },
         accent: {
-          50: '#ECFEFF',
-          100: '#CFFAFE',
-          200: '#A5F3FC',
-          300: '#67E8F9',
-          400: '#22D3EE',
-          500: '#06B6D4', // Cyan accent
-          600: '#0891B2',
+          50: '#FAF7F2',
+          100: '#F3ECE0',
+          200: '#E6D7BE',
+          300: '#D2BD95',
+          400: '#BDA06E',
+          500: '#A6834E', // Champagne accent
+          600: '#8D6C3D',
         }
       },
       fontFamily: {
@@ -61,9 +61,9 @@ export default {
         }
       },
       boxShadow: {
-        'glass-glow': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
-        'neon-purple': '0 0 15px rgba(139, 92, 246, 0.4)',
-        'neon-cyan': '0 0 15px rgba(6, 182, 212, 0.4)',
+        'glass-glow': '0 8px 32px 0 rgba(20, 20, 25, 0.5)',
+        'neon-purple': '0 0 15px rgba(197, 139, 73, 0.25)',
+        'neon-cyan': '0 0 15px rgba(166, 131, 78, 0.25)',
       },
       backdropBlur: {
         xs: '2px',

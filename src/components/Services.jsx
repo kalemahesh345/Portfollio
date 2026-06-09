@@ -6,54 +6,54 @@ const services = [
   {
     icon: <FiGlobe className="w-6 h-6" />,
     title: 'Web Development',
-    tagline: 'High-performance websites tailored to your business',
-    desc: 'Building responsive, fast-loading, and modern web applications from scratch, optimized for performance and search engines.',
+    tagline: 'Custom web applications built with modern tools',
+    desc: 'Building responsive, fast, and secure web applications using the MERN stack, optimized for clean code structure and search engines.',
     features: [
       'Responsive Web Design (Mobile-First)',
       'Full-Stack MERN App Development',
-      'SEO & Speed Optimization',
+      'Performance & Speed Optimization',
       'Custom Admin Dashboards & CMS',
-      'Secure Restful API Integration'
+      'Secure RESTful API Integration'
     ],
     tech: ['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     accentColor: 'border-accent-500/20 hover:border-accent-500/40 hover:shadow-accent-950/20',
     iconBg: 'bg-accent-500/10 border-accent-500/20 text-accent-400',
     btnColor: 'text-accent-400 hover:text-accent-300',
     bulletColor: 'bg-accent-500/20 text-accent-400',
-    spotlight: 'bg-cyan-500/5'
+    spotlight: 'bg-accent-500/5'
   },
   {
     icon: <FiSmartphone className="w-6 h-6" />,
     title: 'App Development',
-    tagline: 'Cross-platform mobile apps with native feel',
-    desc: 'Creating high-fidelity mobile applications for both iOS and Android platforms with intuitive designs and fluid performance.',
+    tagline: 'Hybrid mobile apps built with React Native',
+    desc: 'Creating interactive mobile applications for both iOS and Android platforms with responsive layouts and smooth device integrations.',
     features: [
       'iOS & Android Apps (React Native)',
-      'Smooth & Interactive UI/UX Design',
-      'Secure Authentication & Database Integration',
-      'Push Notifications & Device API Features',
-      'App Store & Play Store Submission'
+      'Clean & Interactive UI/UX Layouts',
+      'Secure User Authentication & Database Setup',
+      'Push Notifications & Device API Integrations',
+      'App Store & Play Store Configuration'
     ],
     tech: ['React Native', 'Expo', 'Redux', 'Firebase', 'Node.js'],
     accentColor: 'border-primary-500/20 hover:border-primary-500/40 hover:shadow-primary-950/20',
     iconBg: 'bg-primary-500/10 border-primary-500/20 text-primary-400',
     btnColor: 'text-primary-400 hover:text-primary-300',
     bulletColor: 'bg-primary-500/20 text-primary-400',
-    spotlight: 'bg-purple-500/5'
+    spotlight: 'bg-primary-500/5'
   },
   {
     icon: <FiShoppingBag className="w-6 h-6" />,
     title: 'E-commerce Services',
-    tagline: 'Scalable online stores built to maximize conversions',
-    desc: 'Developing fully functional e-commerce storefronts with optimized checkout experiences and secure payment flows.',
+    tagline: 'Custom Shopify setups & e-commerce platforms',
+    desc: 'Developing fully functional e-commerce storefronts, custom Shopify themes, and optimized product collection systems.',
     features: [
-      'Custom Shopping Cart & Checkout Logic',
-      'Stripe & PayPal Payment Integrations',
+      'Custom Shopify Theme Customization',
+      'Stripe & Razorpay Payment Integrations',
       'Intuitive Product Management Panels',
-      'Order Tracking & Customer Portal',
-      'Marketing Tools & Analytics Insights'
+      'Order Tracking & Customer Dashboards',
+      'Liquid Template Customizations'
     ],
-    tech: ['Next.js', 'Stripe API', 'MySQL', 'Node.js', 'Tailwind CSS'],
+    tech: ['Shopify Liquid', 'HTML5/CSS3', 'MySQL', 'Node.js', 'React.js'],
     accentColor: 'border-secondary-500/20 hover:border-secondary-500/40 hover:shadow-secondary-950/20',
     iconBg: 'bg-secondary-500/10 border-secondary-500/20 text-secondary-400',
     btnColor: 'text-secondary-400 hover:text-secondary-300',
@@ -101,7 +101,7 @@ export default function Services() {
         <SectionTitle
           tag="What I Offer"
           title="Services I Provide"
-          subtitle="Explore the tailored professional solutions I provide to turn your creative concepts into production-ready digital products."
+          subtitle="Explore the custom development services I offer to build web applications, hybrid mobile apps, and custom e-commerce configurations."
         />
 
         <motion.div

@@ -82,7 +82,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-12 bg-transparent">
       {/* Background radial spotlight */}
-      <div className="absolute bottom-[10%] left-[-10%] spotlight bg-purple-900/5 w-[500px] h-[500px]"></div>
+      <div className="absolute bottom-[10%] left-[-10%] spotlight bg-primary-500/5 w-[500px] h-[500px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <SectionTitle
@@ -179,7 +179,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="e.g. John Doe"
+                      placeholder="Enter Name"
                       className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.name ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300`}
                     />
                     {errors.name && (
@@ -200,7 +200,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="e.g. john@example.com"
+                      placeholder="Enter Email"
                       className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.email ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300`}
                     />
                     {errors.email && (
@@ -222,7 +222,7 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="e.g. Project Collaboration"
+                    placeholder="Enter Subject"
                     className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.subject ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300`}
                   />
                   {errors.subject && (
@@ -243,7 +243,7 @@ export default function Contact() {
                     rows="5"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Type your message here..."
+                    placeholder="Enter your message here..."
                     className={`w-full px-4 py-3 rounded-xl bg-slate-900/50 border ${errors.message ? 'border-red-500/50' : 'border-white/10'} hover:border-white/20 focus:border-primary-500 focus:outline-none text-white text-sm transition-colors duration-300 resize-none`}
                   />
                   {errors.message && (

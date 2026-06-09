@@ -9,9 +9,9 @@ const projectList = [
     tags: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Gemini API'],
     github: 'https://github.com/kalemahesh345/ResumeScore',
     demo: 'https://resume-score-git-main-mahesh08.vercel.app/',
-    gradient: 'from-violet-600/40 via-purple-600/20 to-transparent',
-    borderColor: 'group-hover:border-violet-500/30',
-    glowColor: 'rgba(139, 92, 246, 0.15)',
+    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
+    borderColor: 'group-hover:border-primary-500/30',
+    glowColor: 'rgba(197, 139, 73, 0.15)',
     category: 'Full Stack + AI'
   },
   {
@@ -20,9 +20,9 @@ const projectList = [
     tags: ['React.js', 'CSS3', 'JavaScript', 'HTML', 'Responsive Web Design'],
     github: 'https://github.com/kalemahesh345/ebikes',
     demo: 'https://github.com/kalemahesh345/ebikes',
-    gradient: 'from-cyan-600/40 via-blue-600/20 to-transparent',
-    borderColor: 'group-hover:border-cyan-500/30',
-    glowColor: 'rgba(6, 182, 212, 0.15)',
+    gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
+    borderColor: 'group-hover:border-accent-500/30',
+    glowColor: 'rgba(166, 131, 78, 0.15)',
     category: 'Business Website'
   },
   {
@@ -31,9 +31,9 @@ const projectList = [
     tags: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
     github: 'https://github.com/kalemahesh345/apptitudePlatform',
     demo: 'https://apptitude-platform.vercel.app/',
-    gradient: 'from-emerald-600/40 via-teal-600/20 to-transparent',
-    borderColor: 'group-hover:border-emerald-500/30',
-    glowColor: 'rgba(16, 185, 129, 0.15)',
+    gradient: 'from-secondary-600/40 via-secondary-700/10 to-transparent',
+    borderColor: 'group-hover:border-secondary-500/30',
+    glowColor: 'rgba(152, 138, 117, 0.15)',
     category: 'EdTech Portal'
   },
   {
@@ -41,10 +41,10 @@ const projectList = [
     description: 'An automated web scraper and agent that monitors job boards, parses specifications based on qualifications, and pushes daily alerts to Discord/Email with matching listings.',
     tags: ['Node.js', 'Express.js', 'Puppeteer', 'Nodemailer', 'MongoDB', 'Cron Jobs'],
     github: 'https://github.com/kalemahesh345/N8N-Workflow/blob/main/telegram%20linkdin.json',
-    demo: 'https://demo.com',
-    gradient: 'from-pink-600/40 via-rose-600/20 to-transparent',
-    borderColor: 'group-hover:border-pink-500/30',
-    glowColor: 'rgba(236, 72, 153, 0.15)',
+    demo: '',
+    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
+    borderColor: 'group-hover:border-primary-500/30',
+    glowColor: 'rgba(197, 139, 73, 0.15)',
     category: 'Automation Agent'
   },
   {
@@ -53,9 +53,9 @@ const projectList = [
     tags: ['Shopify', 'Liquid', 'HTML5', 'CSS3', 'JavaScript', 'E-Commerce'],
     github: 'https://github.com/kalemahesh345',
     demo: 'https://sburhadesaraf.com/',
-    gradient: 'from-pink-600/40 via-rose-600/20 to-transparent',
-    borderColor: 'group-hover:border-pink-500/30',
-    glowColor: 'rgba(236, 72, 153, 0.15)',
+    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
+    borderColor: 'group-hover:border-primary-500/30',
+    glowColor: 'rgba(197, 139, 73, 0.15)',
     category: 'E-Commerce'
   }
 ];
@@ -86,7 +86,7 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-12 bg-transparent">
       {/* Background radial spotlight */}
-      <div className="absolute top-[40%] right-[-10%] spotlight bg-purple-900/5 w-[500px] h-[500px]"></div>
+      <div className="absolute top-[40%] right-[-10%] spotlight bg-primary-500/5 w-[500px] h-[500px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <SectionTitle
@@ -175,15 +175,17 @@ export default function Projects() {
                       Source Code
                     </a>
 
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 text-white rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 text-xs font-bold"
-                    >
-                      Live Demo
-                      <FiExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 text-white rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 text-xs font-bold"
+                      >
+                        Live Demo
+                        <FiExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

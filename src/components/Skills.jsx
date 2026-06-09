@@ -12,55 +12,55 @@ import SectionTitle from './SectionTitle';
 const skillCategories = [
   {
     title: 'Frontend Development',
-    accentColor: 'border-primary-500/20 hover:border-primary-500/40',
+    accentColor: 'border-primary-500/20 hover:border-primary-500/40 hover:shadow-primary-950/10',
     iconColor: 'text-primary-400',
     skills: [
-      { name: 'HTML5', level: 90, icon: <FaHtml5 className="w-5 h-5" /> },
-      { name: 'CSS3', level: 90, icon: <FaCss3Alt className="w-5 h-5" /> },
-      { name: 'JavaScript (ES6+)', level: 85, icon: <SiJavascript className="w-5 h-5" /> },
-      { name: 'React.js', level: 80, icon: <FaReact className="w-5 h-5" /> },
-      { name: 'Tailwind CSS', level: 85, icon: <SiTailwindcss className="w-5 h-5" /> },
+      { name: 'HTML5', icon: <FaHtml5 className="w-5 h-5" /> },
+      { name: 'CSS3', icon: <FaCss3Alt className="w-5 h-5" /> },
+      { name: 'JavaScript (ES6+)', icon: <SiJavascript className="w-5 h-5" /> },
+      { name: 'React.js', icon: <FaReact className="w-5 h-5" /> },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-5 h-5" /> },
     ]
   },
   {
     title: 'Backend Development',
-    accentColor: 'border-accent-500/20 hover:border-accent-500/40',
+    accentColor: 'border-accent-500/20 hover:border-accent-500/40 hover:shadow-accent-950/10',
     iconColor: 'text-accent-400',
     skills: [
-      { name: 'Node.js', level: 80, icon: <FaNodeJs className="w-5 h-5" /> },
-      { name: 'Express.js', level: 78, icon: <SiExpress className="w-5 h-5" /> },
-      { name: 'Java', level: 60, icon: <FaJava className="w-5 h-5" /> }
+      { name: 'Node.js', icon: <FaNodeJs className="w-5 h-5" /> },
+      { name: 'Express.js', icon: <SiExpress className="w-5 h-5" /> },
+      { name: 'Java', icon: <FaJava className="w-5 h-5" /> }
     ]
   },
   {
     title: 'Database Systems',
-    accentColor: 'border-secondary-500/20 hover:border-secondary-500/40',
+    accentColor: 'border-secondary-500/20 hover:border-secondary-500/40 hover:shadow-secondary-950/10',
     iconColor: 'text-secondary-400',
     skills: [
-      { name: 'MongoDB', level: 70, icon: <SiMongodb className="w-5 h-5" /> },
-      { name: 'MySQL', level: 75, icon: <SiMysql className="w-5 h-5" /> },
+      { name: 'MongoDB', icon: <SiMongodb className="w-5 h-5" /> },
+      { name: 'MySQL', icon: <SiMysql className="w-5 h-5" /> },
     ]
   },
   {
     title: 'AI & Automation',
-    accentColor: 'border-indigo-500/20 hover:border-indigo-500/40',
-    iconColor: 'text-indigo-400',
+    accentColor: 'border-primary-500/20 hover:border-primary-500/40 hover:shadow-primary-950/10',
+    iconColor: 'text-primary-400',
     skills: [
-      { name: 'Gemini AI', level: 85, icon: <FaBrain className="w-5 h-5" /> },
-      { name: 'OpenAI API', level: 80, icon: <SiOpenai className="w-5 h-5" /> },
-      { name: 'n8n Automation', level: 85, icon: <FaRobot className="w-5 h-5" /> },
-      { name: 'AI Workflow Design', level: 80, icon: <FiCpu className="w-5 h-5" /> },
+      { name: 'Gemini AI', icon: <FaBrain className="w-5 h-5" /> },
+      { name: 'OpenAI API', icon: <SiOpenai className="w-5 h-5" /> },
+      { name: 'n8n Automation', icon: <FaRobot className="w-5 h-5" /> },
+      { name: 'AI Workflows', icon: <FiCpu className="w-5 h-5" /> },
     ]
   },
   {
     title: 'Tools & Utilities',
-    accentColor: 'border-pink-500/20 hover:border-pink-500/40',
-    iconColor: 'text-pink-400',
+    accentColor: 'border-secondary-500/20 hover:border-secondary-500/40 hover:shadow-secondary-950/10',
+    iconColor: 'text-secondary-400',
     skills: [
-      { name: 'Git', level: 80, icon: <FaGitAlt className="w-5 h-5" /> },
-      { name: 'GitHub', level: 82, icon: <FaGithub className="w-5 h-5" /> },
-      { name: 'Postman', level: 75, icon: <SiPostman className="w-5 h-5" /> },
-      { name: 'VS Code', level: 88, icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'Git', icon: <FaGitAlt className="w-5 h-5" /> },
+      { name: 'GitHub', icon: <FaGithub className="w-5 h-5" /> },
+      { name: 'Postman', icon: <SiPostman className="w-5 h-5" /> },
+      { name: 'VS Code', icon: <VscVscode className="w-5 h-5" /> },
     ]
   }
 ];
@@ -76,7 +76,7 @@ export default function Skills() {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -90,13 +90,13 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-12 bg-transparent">
       {/* Glow spotlight */}
-      <div className="absolute top-[30%] left-[-10%] spotlight bg-cyan-900/5 w-[500px] h-[500px]"></div>
+      <div className="absolute top-[30%] left-[-10%] spotlight bg-accent-500/5 w-[500px] h-[500px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <SectionTitle
           tag="My Tech Stack"
           title="Skills & Expertise"
-          subtitle="A comprehensive list of frontend, backend, database, and tool skills I leverage to build modern web solutions."
+          subtitle="Tools, languages, and technologies I use to build full-stack web solutions and custom workflows."
         />
 
         <motion.div
@@ -118,35 +118,24 @@ export default function Skills() {
                 {category.title}
               </h3>
 
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="group">
-                    <div className="flex justify-between items-center mb-1.5">
-                      <div className="flex items-center gap-2.5 text-slate-300 group-hover:text-white transition-colors duration-300">
-                        <span className={`${category.iconColor} group-hover:scale-110 transition-transform duration-300`}>
-                          {skill.icon}
-                        </span>
-                        <span className="text-sm font-semibold">{skill.name}</span>
-                      </div>
-                      <span className="text-xs font-bold text-slate-400">{skill.level}%</span>
-                    </div>
-
-                    {/* Progress Bar Container */}
-                    <div className="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-white/5">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, delay: 0.1, ease: 'easeOut' }}
-                        className={`h-full rounded-full bg-gradient-to-r ${idx === 0 ? 'from-primary-600 to-primary-400' :
-                          idx === 1 ? 'from-accent-600 to-accent-400' :
-                            idx === 2 ? 'from-secondary-600 to-secondary-400' :
-                              idx === 3 ? 'from-indigo-600 to-purple-400' :
-                                'from-pink-600 to-pink-400'
-                          }`}
-                      />
-                    </div>
-                  </div>
+                  <motion.div
+                    key={sIdx}
+                    whileHover={{ 
+                      scale: 1.05,
+                      y: -2,
+                      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                      borderColor: 'rgba(255, 255, 255, 0.15)',
+                    }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                    className="flex items-center gap-2.5 px-4 py-3 bg-white/[0.015] border border-white/5 rounded-2xl text-slate-300 hover:text-white transition-all duration-300 cursor-default"
+                  >
+                    <span className={`${category.iconColor} text-lg shrink-0`}>
+                      {skill.icon}
+                    </span>
+                    <span className="text-sm font-semibold">{skill.name}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

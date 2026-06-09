@@ -79,7 +79,7 @@ export default function Education() {
   return (
     <section id="education" className="relative py-12 bg-transparent">
       {/* Background glow spotlight */}
-      <div className="absolute top-[30%] right-[-10%] spotlight bg-cyan-900/5 w-[500px] h-[500px]"></div>
+      <div className="absolute top-[30%] right-[-10%] spotlight bg-accent-500/5 w-[500px] h-[500px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <SectionTitle
