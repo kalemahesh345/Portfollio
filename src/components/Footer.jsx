@@ -32,7 +32,7 @@ export default function Footer() {
         </button>
 
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 mb-2 mt-2 text-center md:text-left">
-          {/* Logo & short description */}
+          {/* Logo & short */}
           <div>
             <h3 className="text-lg font-bold text-white tracking-wider mb-2">
               MAHESH KALE<span className="text-primary-500">.</span>
@@ -96,6 +96,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
 
       </div>
     </footer>
