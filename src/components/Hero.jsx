@@ -83,8 +83,8 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10"
           >
             <a
-              href="src/assets/Kale_Mahesh_Resume.pdf"
-              download="src/assets/Kale_Mahesh_Resume.pdf"
+              href="/Kale_Mahesh_Resume.pdf"
+              download="/Kale_Mahesh_Resume.pdf"
               className="px-8 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white shadow-lg shadow-primary-950/40 text-center transition-all duration-300 hover:-translate-y-0.5 border border-primary-400/20 active:translate-y-0 text-sm"
             >
               Download Resume
