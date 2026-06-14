@@ -52,7 +52,7 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             variants={itemVariants}
             className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4 leading-tight font-sans"
           >
@@ -63,14 +63,14 @@ export default function Hero() {
           </motion.h1>
 
           {/* Subtitle / Focus statement */}
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl font-bold text-slate-200 mb-4 tracking-wide max-w-xl animate-none"
           >
             Full Stack Developer specializing in MERN stack & AI Workflow Automation.
           </motion.p>
 
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-slate-400 text-base md:text-lg mb-8 max-w-lg leading-relaxed"
           >
@@ -78,13 +78,13 @@ export default function Hero() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10"
           >
             <a
-              href="Kale_Mahesh_Resume.pdf"
-              download="Kale_Mahesh_Resume.pdf"
+              href="src/assets/Kale_Mahesh_Resume.pdf"
+              download="src/assets/Kale_Mahesh_Resume.pdf"
               className="px-8 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white shadow-lg shadow-primary-950/40 text-center transition-all duration-300 hover:-translate-y-0.5 border border-primary-400/20 active:translate-y-0 text-sm"
             >
               Download Resume
@@ -99,7 +99,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Socials */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex items-center gap-6"
           >
