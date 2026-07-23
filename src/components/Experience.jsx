@@ -34,7 +34,7 @@ const experiences = [
   },
   {
     type: 'Internship',
-    role: 'Shopify Developer',
+    role: 'Web Developer',
     company: 'Rukhamani Treasures Pvt. Ltd.',
     location: 'Pune, India',
     period: 'March 2026 - Present',
