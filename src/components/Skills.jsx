@@ -3,7 +3,7 @@ import {
   FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaJava, FaBrain, FaRobot
 } from 'react-icons/fa';
 import {
-  SiJavascript, SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostman, SiOpenai
+  SiJavascript, SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostman, SiOpenai, SiPrisma
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { FiCpu } from 'react-icons/fi';
@@ -43,6 +43,7 @@ const skillCategories = [
     skills: [
       { name: 'MongoDB', icon: <SiMongodb className="w-5 h-5" /> },
       { name: 'MySQL', icon: <SiMysql className="w-5 h-5" /> },
+      { name: 'Prisma ORM', icon: <SiPrisma className="w-5 h-5" /> },
     ]
   },
   {

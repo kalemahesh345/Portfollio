@@ -4,6 +4,17 @@ import SectionTitle from './SectionTitle';
 
 const projectList = [
   {
+    title: 'SILVEAR – Full-Stack Jewellery E-Commerce Platform',
+    description: 'A full-stack jewellery e-commerce platform built with React.js, Node.js, Express.js, MySQL, Prisma ORM, and RESTful APIs. Features JWT auth, product catalog & filters, cart, wishlist, coupons, reviews, Razorpay payment gateway, Shiprocket shipping integration, automated PDF invoice generation, email notifications, and an admin management dashboard.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'Prisma ORM', 'Razorpay', 'Shiprocket API', 'JWT'],
+    github: 'https://github.com/kalemahesh345',
+    demo: '',
+    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
+    borderColor: 'group-hover:border-primary-500/30',
+    glowColor: 'rgba(197, 139, 73, 0.15)',
+    category: 'Full Stack E-Commerce'
+  },
+  {
     title: 'AI LinkedIn & Telegram Automation Workflow',
     description: 'An intelligent automated system built using n8n that fetches daily news via RSS feeds & REST APIs, generates concise AI summaries and relevant hashtags using Google Gemini AI, and auto-posts updates to LinkedIn and Telegram channels for seamless social media consistency and engagement.',
     tags: ['n8n', 'Google Gemini AI', 'RSS Feeds', 'REST APIs', 'Telegram API', 'LinkedIn API', 'Workflow Automation'],
