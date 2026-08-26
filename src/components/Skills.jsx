@@ -19,7 +19,10 @@ const skillCategories = [
       { name: 'CSS3', icon: <FaCss3Alt className="w-5 h-5" /> },
       { name: 'JavaScript (ES6+)', icon: <SiJavascript className="w-5 h-5" /> },
       { name: 'React.js', icon: <FaReact className="w-5 h-5" /> },
+      { name: 'React Native', icon: <FaReact className="w-5 h-5" /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-5 h-5" /> },
+      { name: 'Redux', icon: <FaReact className="w-5 h-5" /> },
+      { name: 'React Router', icon: <FaReact className="w-5 h-5" /> },
     ]
   },
   {
@@ -28,6 +31,7 @@ const skillCategories = [
     iconColor: 'text-accent-400',
     skills: [
       { name: 'Node.js', icon: <FaNodeJs className="w-5 h-5" /> },
+      { name: 'Liquid', icon: <FaHtml5 className="w-5 h-5" /> },
       { name: 'Express.js', icon: <SiExpress className="w-5 h-5" /> },
       { name: 'Java', icon: <FaJava className="w-5 h-5" /> }
     ]
@@ -48,8 +52,13 @@ const skillCategories = [
     skills: [
       { name: 'Gemini AI', icon: <FaBrain className="w-5 h-5" /> },
       { name: 'OpenAI API', icon: <SiOpenai className="w-5 h-5" /> },
+      { name: 'LLM', icon: <FaBrain className="w-5 h-5" /> },
+      { name: 'LangChain', icon: <FaBrain className="w-5 h-5" /> },
+      { name: 'RAG', icon: <FaBrain className="w-5 h-5" /> },
       { name: 'n8n Automation', icon: <FaRobot className="w-5 h-5" /> },
+      { name: 'AI Agents', icon: <FaBrain className="w-5 h-5" /> },
       { name: 'AI Workflows', icon: <FiCpu className="w-5 h-5" /> },
+
     ]
   },
   {
@@ -61,6 +70,15 @@ const skillCategories = [
       { name: 'GitHub', icon: <FaGithub className="w-5 h-5" /> },
       { name: 'Postman', icon: <SiPostman className="w-5 h-5" /> },
       { name: 'VS Code', icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'Vercel', icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'Github Actions', icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'Docker', icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'Firebase', icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'N8N', icon: <VscVscode className="w-5 h-5" /> },
+      { name: 'Shopify', icon: <VscVscode className="w-5 h-5" /> },
+
+
+
     ]
   }
 ];
@@ -122,7 +140,7 @@ export default function Skills() {
                 {category.skills.map((skill, sIdx) => (
                   <motion.div
                     key={sIdx}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.05,
                       y: -2,
                       backgroundColor: 'rgba(255, 255, 255, 0.05)',
