@@ -4,6 +4,17 @@ import SectionTitle from './SectionTitle';
 
 const projectList = [
   {
+    title: 'AI LinkedIn & Telegram Automation Workflow',
+    description: 'An intelligent automated system built using n8n that fetches daily news via RSS feeds & REST APIs, generates concise AI summaries and relevant hashtags using Google Gemini AI, and auto-posts updates to LinkedIn and Telegram channels for seamless social media consistency and engagement.',
+    tags: ['n8n', 'Google Gemini AI', 'RSS Feeds', 'REST APIs', 'Telegram API', 'LinkedIn API', 'Workflow Automation'],
+    github: 'https://github.com/kalemahesh345/N8N-Workflow/blob/main/telegram%20linkdin.json',
+    demo: 'https://github.com/kalemahesh345/N8N-Workflow',
+    gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
+    borderColor: 'group-hover:border-accent-500/30',
+    glowColor: 'rgba(166, 131, 78, 0.15)',
+    category: 'AI Automation'
+  },
+  {
     title: 'Resume-ATS Score',
     description: 'A web application that analyzes resumes and provides ATS-based scoring, keyword insights, and improvement recommendations to help users create recruiter-friendly resumes and increase interview opportunities.',
     tags: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'Gemini API'],
@@ -15,15 +26,26 @@ const projectList = [
     category: 'Full Stack + AI'
   },
   {
-    title: 'E-Commerce Platform',
-    description: 'A modern and responsive electric bike showcase website featuring product displays, interactive UI components, image assets, custom JavaScript functionality, and mobile-friendly design for promoting e-bike products and services.',
-    tags: ['React.js', 'CSS3', 'JavaScript', 'HTML', 'Responsive Web Design'],
-    github: 'https://github.com/kalemahesh345/ebikes',
-    demo: 'https://github.com/kalemahesh345/ebikes',
-    gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
-    borderColor: 'group-hover:border-accent-500/30',
-    glowColor: 'rgba(166, 131, 78, 0.15)',
-    category: 'Business Website'
+    title: 'SBurhade Saraf - Jewelry E-Commerce Store',
+    description: 'Developed a custom Shopify-based jewelry e-commerce website for SBurhade Saraf. Implemented theme customization, product collections, responsive layouts, navigation menus, and optimized shopping experiences using Shopify Liquid, HTML, CSS, and JavaScript.',
+    tags: ['Shopify', 'Liquid', 'HTML5', 'CSS3', 'JavaScript', 'E-Commerce'],
+    github: 'https://github.com/kalemahesh345',
+    demo: 'https://sburhadesaraf.com/',
+    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
+    borderColor: 'group-hover:border-primary-500/30',
+    glowColor: 'rgba(197, 139, 73, 0.15)',
+    category: 'E-Commerce'
+  },
+  {
+    title: 'Job Alert AI Agent',
+    description: 'An automated web scraper and agent that monitors job boards, parses specifications based on qualifications, and pushes daily alerts to Discord/Email with matching listings.',
+    tags: ['Node.js', 'Express.js', 'Puppeteer', 'Nodemailer', 'MongoDB', 'Cron Jobs'],
+    github: 'https://github.com/kalemahesh345',
+    demo: '',
+    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
+    borderColor: 'group-hover:border-primary-500/30',
+    glowColor: 'rgba(197, 139, 73, 0.15)',
+    category: 'Automation Agent'
   },
   {
     title: 'Aptitude Test Platform',
@@ -37,26 +59,15 @@ const projectList = [
     category: 'EdTech Portal'
   },
   {
-    title: 'Job Alert AI Agent',
-    description: 'An automated web scraper and agent that monitors job boards, parses specifications based on qualifications, and pushes daily alerts to Discord/Email with matching listings.',
-    tags: ['Node.js', 'Express.js', 'Puppeteer', 'Nodemailer', 'MongoDB', 'Cron Jobs'],
-    github: 'https://github.com/kalemahesh345/N8N-Workflow/blob/main/telegram%20linkdin.json',
-    demo: '',
-    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
-    borderColor: 'group-hover:border-primary-500/30',
-    glowColor: 'rgba(197, 139, 73, 0.15)',
-    category: 'Automation Agent'
-  },
-  {
-    title: 'SBurhade Saraf - Jewelry E-Commerce Store',
-    description: 'Developed a custom Shopify-based jewelry e-commerce website for SBurhade Saraf. Implemented theme customization, product collections, responsive layouts, navigation menus, and optimized shopping experiences using Shopify Liquid, HTML, CSS, and JavaScript.',
-    tags: ['Shopify', 'Liquid', 'HTML5', 'CSS3', 'JavaScript', 'E-Commerce'],
-    github: 'https://github.com/kalemahesh345',
-    demo: 'https://sburhadesaraf.com/',
-    gradient: 'from-primary-600/40 via-primary-700/10 to-transparent',
-    borderColor: 'group-hover:border-primary-500/30',
-    glowColor: 'rgba(197, 139, 73, 0.15)',
-    category: 'E-Commerce'
+    title: 'E-Commerce Platform',
+    description: 'A modern and responsive electric bike showcase website featuring product displays, interactive UI components, image assets, custom JavaScript functionality, and mobile-friendly design for promoting e-bike products and services.',
+    tags: ['React.js', 'CSS3', 'JavaScript', 'HTML', 'Responsive Web Design'],
+    github: 'https://github.com/kalemahesh345/ebikes',
+    demo: 'https://github.com/kalemahesh345/ebikes',
+    gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
+    borderColor: 'group-hover:border-accent-500/30',
+    glowColor: 'rgba(166, 131, 78, 0.15)',
+    category: 'Business Website'
   }
 ];
 
@@ -107,7 +118,7 @@ export default function Projects() {
               key={idx}
               variants={cardVariants}
               whileHover={{ y: -8 }}
-              className={`group relative glass-card rounded-3xl overflow-hidden border border-white/5 flex flex-col justify-between h-[450px] transition-all duration-500 hover:shadow-2xl`}
+              className={`group relative glass-card rounded-3xl overflow-hidden border border-white/5 flex flex-col justify-between min-h-[460px] h-full transition-all duration-500 hover:shadow-2xl`}
               style={{
                 '--glow-color': project.glowColor,
               }}
