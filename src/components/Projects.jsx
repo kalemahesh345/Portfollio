@@ -21,7 +21,7 @@ const projectList = [
     tags: ['n8n', 'Google Gemini AI', 'RSS Feeds', 'REST APIs', 'Telegram API', 'LinkedIn API', 'Workflow Automation'],
     github: 'https://github.com/kalemahesh345/N8N-Workflow/blob/main/telegram%20linkdin.json',
     demo: 'https://github.com/kalemahesh345/N8N-Workflow',
-    workflowImage: '/workflows/linkedin-telegram-workflow.png',
+    workflowImage: 'src/assets/Telegram linkdin Auto post Agent.png',
     gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
     borderColor: 'group-hover:border-accent-500/30',
     glowColor: 'rgba(166, 131, 78, 0.15)',
@@ -88,7 +88,7 @@ const projectList = [
     tags: ['n8n', 'Google Gemini', 'WhatsApp', 'Webhooks', 'Google Sheets', 'Ai Agent', 'Conversational Memory', 'API Integration'],
     github: 'https://github.com/kalemahesh345/N8N-Workflow/blob/main/Whatapp%20Agent.json',
     demo: 'http://localhost:5678/workflow/MxrrhOh9PcNqhz4y',
-    workflowImage: '/workflows/whatsapp-agent-workflow.png',
+    workflowImage: 'C:\Users\Kale Mahesh\OneDrive\Desktop\mk-portfolio\src\assets\WhatsApp Agent.png',
     gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
     borderColor: 'group-hover:border-accent-500/30',
     glowColor: 'rgba(166, 131, 78, 0.15)',
@@ -368,5 +368,6 @@ export default function Projects() {
         />
       )}
     </>
+
   );
 }
