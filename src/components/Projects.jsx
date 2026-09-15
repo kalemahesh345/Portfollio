@@ -79,6 +79,17 @@ const projectList = [
     borderColor: 'group-hover:border-accent-500/30',
     glowColor: 'rgba(166, 131, 78, 0.15)',
     category: 'Business Website'
+  },
+  {
+    title: 'AI-Powered WhatsApp Customer Support Agent',
+    description: 'Developed a real-time AI-powered WhatsApp Customer Support Agent using n8n and Google Gemini. The agent interacts with customers through WhatsApp, understands their queries, generates intelligent responses in real time, and automatically replies to customers.',
+    tags: ['n8n', 'Google Gemini', 'WhatsApp', 'Webhooks', 'Google Sheets', 'Ai Agent', 'Conversational Memory', 'API Integration'],
+    github: 'https://github.com/kalemahesh345/N8N-Workflow/blob/main/Whatapp%20Agent.json',
+    demo: 'http://localhost:5678/workflow/MxrrhOh9PcNqhz4y',
+    gradient: 'from-accent-600/40 via-accent-700/10 to-transparent',
+    borderColor: 'group-hover:border-accent-500/30',
+    glowColor: 'rgba(166, 131, 78, 0.15)',
+    category: 'Business Website'
   }
 ];
 
