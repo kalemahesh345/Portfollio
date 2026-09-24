@@ -67,7 +67,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl font-bold text-slate-200 mb-4 tracking-wide max-w-xl animate-none"
           >
-            Full Stack Developer, App DeveloperMERN stack Developer, Java Developer, AI Workflow Automation.
+            Full Stack Developer, App Developer, MERN stack Developer, Java Developer, AI Workflow Automation.
           </motion.p>
 
           <motion.p
