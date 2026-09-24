@@ -48,7 +48,7 @@ export default function Hero() {
           {/* Greeting Badge */}
           <motion.div variants={itemVariants} className="inline-block mb-6">
             <span className="px-4 py-1.5 rounded-full text-xs font-bold tracking-wider text-accent-400 bg-accent-500/10 border border-accent-500/20 uppercase">
-              Available for Internships & Projects
+              Available for Full Time Wroking & Project Works
             </span>
           </motion.div>
 
@@ -67,7 +67,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl font-bold text-slate-200 mb-4 tracking-wide max-w-xl animate-none"
           >
-            Full Stack Developer specializing in MERN stack & AI Workflow Automation.
+            Full Stack Developer, App DeveloperMERN stack Developer, Java Developer, AI Workflow Automation.
           </motion.p>
 
           <motion.p
@@ -83,8 +83,8 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10"
           >
             <a
-              href="/Kale_Mahesh_Resume.pdf"
-              download="/Kale_Mahesh_Resume.pdf"
+              href="/Mahesh_Resume.pdf"
+              download="Mahesh_Resume.pdf"
               className="px-8 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white shadow-lg shadow-primary-950/40 text-center transition-all duration-300 hover:-translate-y-0.5 border border-primary-400/20 active:translate-y-0 text-sm"
             >
               Download Resume
